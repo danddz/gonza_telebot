@@ -1,0 +1,15 @@
+[Unit]
+Description=gonza_telebot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/bin/bots/gonza_telebot
+ExecStart=/usr/bin/python3 /usr/bin/bots/gonza_telebot/main.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
